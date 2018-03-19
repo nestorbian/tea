@@ -1,0 +1,67 @@
+<div class="content">
+  <div class="heading">
+    <div class="container">
+      <img class="logo ml30" src="/assets/images/tea_logo.jpg" alt="loading"/>
+      <span>欢迎登陆</span>
+      <!-- <div class="to-login">
+        <span>已有账号？</span>
+        <a [routerLink]="['/login']">请登录</a>
+      </div> -->
+    </div>
+  </div>
+  <div class="body clear-fix">
+    <div class="col-md-3 col-md-offset-7">
+        <div class="panel panel-default m32">
+          <div class="panel-heading center">
+            <span class="red-bold">账户登陆</span>
+          </div>
+          <div class="panel-body">
+            <form class="login-form clear-fix" #loginForm="ngForm" (ngSubmit)="submit()">
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-user"></span></span>
+                  <input type="text" class="form-control" placeholder="用户名/已验证手机" aria-describedby="basic-addon1" name="userName"
+                  [(ngModel)]="userName" #localUserName="ngModel" required maxlength="25" [class.red-border]="localUserName.touched && localUserName.invalid"/>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon" id="basic-addon1"><span class="	glyphicon glyphicon-lock"></span></span>
+                  <input type="text" class="form-control" placeholder="密码" aria-describedby="basic-addon1" name="password" [(ngModel)]="password"
+                  #localPassword="ngModel" maxlength="25" required [class.red-border]="localPassword.touched && localPassword.invalid" />
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb15">
+                    <p-checkbox [(ngModel)]="rememberPwd" binary="true" name="rememberPwd" id="rememberPwd"></p-checkbox>
+                    <label for="rememberPwd">记住密码</label>
+                    <!-- <p-checkbox name="group1" value="记住密码" label="记住密码"></p-checkbox> -->
+                </div>
+                <div class="col-md-6 clear-fix">
+                  <span class="pull-right"><a style="font-weight: bold">忘记密码</a></span>
+                </div>
+              </div>
+              <button class="btn btn-danger btn-block">登陆</button>
+            </form>
+          </div>
+          <div class="panel-footer clear-fix">
+            <div class="pull-right cp" (click)="register()">
+              <span>立即注册</span><div class="w10"></div><span class="glyphicon glyphicon-hand-right"></span>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="container">
+        <div class="row">
+          <span><a href="#">关于我们</a>&nbsp;|&nbsp;<a href="#">联系我们</a>&nbsp;|&nbsp;<a href="#">人才招聘</a>&nbsp;|&nbsp;
+            <a href="#">广告服务</a>&nbsp;|&nbsp;<a href="#">友情链接</a>&nbsp;|&nbsp;<a href="#">销售联盟</a>&nbsp;|&nbsp;
+            <a href="#">English Site</a></span>
+        </div>
+        <div class="row">
+            <span>Copyright©2004-2018  茶道网版权所有</span>
+        </div>
+    </div>
+  </div>
+</div>

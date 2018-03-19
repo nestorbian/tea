@@ -1,0 +1,10 @@
+spring:
+  profiles:
+    active: dev
+
+#pagehelper分页插件
+pagehelper:
+helperDialect: mysql
+reasonable: true
+supportMethodsArguments: true
+params: count=countSql
